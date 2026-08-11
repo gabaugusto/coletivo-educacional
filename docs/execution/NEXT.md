@@ -186,7 +186,7 @@ Não apresentar os 30 estudantes ainda.
 
 Título:
 
-**Coletivo Educação**
+**Coletivo Educacional**
 
 Subtítulo:
 
@@ -324,7 +324,7 @@ Cada sprint deve conter:
 Exemplo:
 
 ```text
-COLETIVO EDUCAÇÃO
+COLETIVO EDUCACIONAL
 
 SPRINT 1 / 3
 

@@ -414,6 +414,14 @@ label {
 
 .access-panel {
   margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.access-panel button{
+  max-width: 20vw;
+  margin: 2vh auto;
+
 }
 
 .dual-access label {
@@ -473,6 +481,7 @@ blockquote {
 }
 
 @media (max-width: 1100px) {
+
   .sprint-header,
   .sprint-intro,
   .workbench {

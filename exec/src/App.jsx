@@ -145,7 +145,7 @@ function Intro({ onStart }) {
   return (
     <section className="intro">
       <p className="eyebrow">Experiência pedagógica</p>
-      <h1>Coletivo Educação</h1>
+      <h1>Coletivo Educacional</h1>
       <p className="subtitle">Uma experiência sobre decisões, pessoas e adaptação.</p>
       <div className="intro-copy">
         <p>Você e sua equipe irão acompanhar uma turma ao longo de diferentes acontecimentos.</p>
@@ -262,8 +262,8 @@ function SprintPage({ sprint, experience, updateExperience, setNotice, onValidCo
       </div>
       {sprint === 1 ? (
         <StoryBlock lines={[
-          'Você acaba de começar a acompanhar esta turma.',
-          'Existem 30 estudantes, diferentes trajetórias e alguns sinais que podem ou não exigir atenção.',
+          'Vocês acabam de começar a acompanhar esta turma.',
+          'Há 30 estudantes, diferentes trajetórias e alguns sinais que podem ou não exigir atenção.',
           'Neste momento, estas são todas as informações disponíveis.',
         ]} />
       ) : null}
@@ -307,7 +307,7 @@ function SprintHeader({ sprint, startedAt }) {
   return (
     <header className="sprint-header">
       <div>
-        <p className="brand">Coletivo Educação</p>
+        <p className="brand">Coletivo Educacional</p>
         <p className="sprint-count">Sprint {sprint} / 3</p>
       </div>
       <SprintProgress sprint={sprint} />
@@ -353,7 +353,7 @@ function SprintMission({ sprint }) {
   const mission = SPRINT_CONFIG[sprint].mission
   return (
     <aside className="mission">
-      <h2>Sua missão</h2>
+      <h2>A missão: </h2>
       <p>{mission.objective}</p>
       <dl>
         <div><dt>Desafio</dt><dd>{mission.challenge}</dd></div>
@@ -654,7 +654,7 @@ function SprintAccess({ sprint, setNotice, onValidCode, updateExperience }) {
       <h2>{sprint === 1 ? 'Preparados para avançar?' : 'Encerramento'}</h2>
       <p>Quando o facilitador liberar a próxima etapa, insira o código abaixo.</p>
       <label>{sprint === 1 ? 'Código da próxima etapa' : 'Código de encerramento'}
-        <input value={primaryCode} onChange={(event) => setPrimaryCode(event.target.value)} />
+        <input id='code001' value={primaryCode} onChange={(event) => setPrimaryCode(event.target.value)} />
       </label>
       <button type="button" onClick={() => validate(primaryCode, expected, sprint === 1 ? 'TRANSITION_1' : 'FINISH')}>
         {sprint === 1 ? 'Avançar' : 'Finalizar atividade'}
