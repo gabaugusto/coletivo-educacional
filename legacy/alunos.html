@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Turma 24B · Coletivo Educação</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #fff;
+      --text: #1c2430;
+      --muted: #5f6b7a;
+      --line: #dfe4ea;
+      --accent: #0b5cab;
+      --good: #1f8a4c;
+      --warn: #b8860b;
+      --risk: #b33a3a;
+      --later: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text)
+    }
+
+    header {
+      background: #101827;
+      color: #fff;
+      padding: 28px 5vw 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px #0002
+    }
+
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.5rem, 3vw, 2.2rem)
+    }
+
+    header p {
+      margin: 0;
+      color: #cbd5e1;
+      max-width: 900px
+    }
+
+    nav {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #ffffff44;
+      padding: 8px 12px;
+      border-radius: 999px
+    }
+
+    main {
+      padding: 26px 5vw 56px;
+      max-width: 1500px;
+      margin: auto
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0
+    }
+
+    input,
+    select,
+    button {
+      font: inherit
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff
+    }
+
+    .info {
+      background: #eef5ff;
+      border: 1px solid #cfe1ff;
+      border-radius: 14px;
+      padding: 16px;
+      margin: 16px 0
+    }
+
+    .info strong {
+      color: #123f75
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 14px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 17px;
+      box-shadow: 0 4px 16px #13233a0b
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      margin: 0 0 5px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .id {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 12px 0
+    }
+
+    .stat {
+      padding: 9px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #edf0f4
+    }
+
+    .stat b {
+      display: block;
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .stat span {
+      font-weight: 700
+    }
+
+    .label {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 12px
+    }
+
+    .card p {
+      margin: 5px 0 0;
+      line-height: 1.45
+    }
+
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px
+    }
+
+    .btn {
+      border: 0;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block
+    }
+
+    .btn.secondary {
+      background: #e8eef7;
+      color: #17304e
+    }
+
+    .legend {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+      color: var(--muted);
+      font-size: .92rem
+    }
+
+    small.note {
+      display: block;
+      color: var(--muted);
+      margin-top: 12px;
+      line-height: 1.4
+    }
+
+    @media(max-width:760px) {
+      .toolbar {
+        grid-template-columns: 1fr
+      }
+
+      header {
+        position: static
+      }
+    }
+
+    @media print {
+      header {
+        position: static
+      }
+
+      .toolbar,
+      .actions {
+        display: none
+      }
+
+      body {
+        background: white
+      }
+
+      .card {
+        break-inside: avoid
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Turma 24B · 30 estudantes fictícios</h1>
+    <p>Base para a Sprint 1. O objetivo é separar evidência de hipótese, identificar situações que merecem atenção e
+      priorizar apenas cinco ações iniciais.</p>
+    <nav><a href="alunos.html">Turma</a><a href="sprints.html">Sprints e Backlog</a></nav>
+  </header>
+  <main>
+    <div class="info"><strong>Regra pedagógica:</strong> nenhum perfil representa “um aluno que vai evadir”. Os cards
+      trazem evidências incompletas. A equipe precisa discutir hipóteses, evitar rotulações e decidir onde vale
+      investigar ou agir primeiro.</div>
+    <div class="toolbar">
+      <input id="search" placeholder="Buscar por nome, evidência ou contexto">
+      <select id="attendance">
+        <option value="">Qualquer frequência</option>
+        <option value="under80">Abaixo de 80%</option>
+        <option value="80to90">80% a 89%</option>
+        <option value="90plus">90% ou mais</option>
+      </select>
+      <select id="participation">
+        <option value="">Qualquer participação</option>
+        <option>Alta</option>
+        <option>Média</option>
+        <option>Baixa</option>
+      </select>
+    </div>
+    <div class="legend">Dados úteis: <span>frequência</span> · <span>entregas</span> · <span>participação</span> ·
+      <span>evidências recentes</span> · <span>contexto conhecido</span></div>
+    <section id="grid" class="grid"></section>
+    <small class="note">Sugestão de uso: cada squad escolhe no máximo 5 estudantes/situações para levar ao backlog. O
+      botão “Levar ao backlog” abre a página de sprints e registra a evidência como ponto de partida.</small>
+  </main>
+  <script>
+    let students = [];
+    const grid = document.getElementById('grid');
+    function render() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const fa = document.getElementById('attendance').value;
+      const fp = document.getElementById('participation').value;
+      const filtered = students.filter(s => {
+        const text = (s.name + ' ' + s.evidence + ' ' + s.context).toLowerCase();
+        const okq = !q || text.includes(q);
+        const oka = !fa || (fa === 'under80' && s.attendance < 80) || (fa === '80to90' && s.attendance >= 80 && s.attendance < 90) || (fa === '90plus' && s.attendance >= 90);
+        const okp = !fp || s.participation === fp;
+        return okq && oka && okp;
+      });
+      grid.innerHTML = filtered.map(s => `
+ <article class="card">
+   <h2>${s.name}, ${s.age} <span class="id">${s.id}</span></h2>
+   <div class="stats">
+     <div class="stat"><b>Frequência</b><span>${s.attendance}%</span></div>
+     <div class="stat"><b>Entregas</b><span>${s.deliveries}%</span></div>
+     <div class="stat"><b>Participação</b><span>${s.participation}</span></div>
+   </div>
+   <div class="label">Evidência recente</div><p>${s.evidence}</p>
+   <div class="label">Contexto conhecido</div><p>${s.context}</p>
+   <div class="actions"><a class="btn" href="sprints.html?student=${encodeURIComponent(s.id + ' · ' + s.name)}&evidence=${encodeURIComponent(s.evidence)}">Levar ao backlog</a></div>
+ </article>`).join('');
+    }
+    async function loadStudents() {
+      const response = await fetch('students.json');
+      if (!response.ok) {
+        throw new Error('Falha ao carregar students.json');
+      }
+      students = await response.json();
+      render();
+    }
+    ['search', 'attendance', 'participation'].forEach(id => document.getElementById(id).addEventListener('input', render));
+    loadStudents().catch(() => {
+      grid.innerHTML = '<article class="card"><p>Não foi possível carregar os dados da turma.</p></article>';
+    });
+  </script>
+</body>
+
+</html>

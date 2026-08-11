@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sprints · Coletivo Educação</title>
+<style>
+:root {
+ --bg:#f5f7fa;--card:#fff;--text:#1d2632;--muted:#657180;--line:#dce2e8;--accent:#0b5cab;
+ --green:#23864c;--yellow:#b77900;--red:#b93838;--blue:#2563eb;--dark:#101827;
+}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--dark);color:#fff;padding:26px 5vw}header h1{margin:0 0 6px}header p{margin:0;color:#cbd5e1;max-width:950px}
+nav{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;border:1px solid #ffffff44;padding:8px 12px;border-radius:999px}
+main{max-width:1500px;margin:auto;padding:28px 5vw 60px}h2{margin-top:32px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sprint{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.sprint h3{margin-top:0}.tag{font-size:.77rem;font-weight:700;color:var(--accent);text-transform:uppercase}
+.callout{padding:15px 17px;border-radius:14px;background:#eef5ff;border:1px solid #cfe1ff;margin:16px 0;line-height:1.5}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.legend div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.dot{font-size:1.2rem}.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}.event{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}.event b{display:block;margin-bottom:5px}
+.board-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px}table{border-collapse:collapse;width:100%;min-width:1050px}th,td{border-bottom:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}th{background:#f8fafc;font-size:.82rem;color:#4a5665}
+input,select,textarea,button{font:inherit}input,select,textarea{width:100%;padding:8px 9px;border:1px solid #cfd6de;border-radius:8px;background:white}textarea{min-height:58px;resize:vertical}
+button{border:0;border-radius:9px;padding:9px 12px;cursor:pointer}.primary{background:var(--accent);color:white}.secondary{background:#e7edf5;color:#1a385b}.danger{background:#fbe9e9;color:#8e2424}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.status-cell{min-width:150px}
+.status-permaneceu{border-left:6px solid var(--green)}.status-alterado{border-left:6px solid var(--yellow)}.status-abandonado{border-left:6px solid var(--red)}.status-apareceu{border-left:6px solid var(--blue)}
+.audit{font-size:.8rem;color:var(--muted);margin-top:5px}.crisis{background:#fff3f3;border:1px solid #f2c4c4;border-radius:14px;padding:16px}
+.rules{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;line-height:1.55}
+@media(max-width:900px){.timeline,.legend{grid-template-columns:1fr}}
+@media print{.toolbar,button,nav{display:none} body{background:#fff} .sprint,.rules,.board-wrap{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+ <h1>Sprints + Histórico de decisões</h1>
+ <p>O quadro abaixo acompanha como cada decisão evolui. O estudante não recebe uma cor; quem recebe o marcador é a <strong>decisão do backlog</strong>.</p>
+ <nav><a href="alunos.html">Turma</a><a href="sprints.html">Sprints e Backlog</a></nav>
+</header>
+<main>
+ <div class="callout"><strong>Lógica recomendada:</strong> um item nasce com um identificador e continua sendo o mesmo item ao longo das sprints. Ao revisar, a equipe classifica o que aconteceu com aquela decisão. Assim é possível enxergar adaptação sem apagar o caminho percorrido.</div>
+
+ <section class="legend">
+   <div><span class="dot">🟢</span><strong> Permaneceu</strong><br>Mesma intenção e prioridade essencial.</div>
+   <div><span class="dot">🟡</span><strong> Foi alterado</strong><br>Continua relevante, mas ação, prioridade, responsável ou hipótese mudou.</div>
+   <div><span class="dot">🔴</span><strong> Foi abandonado</strong><br>Deixou de ser prioridade ou perdeu sentido diante das novas informações.</div>
+   <div><span class="dot">🔵</span><strong> Apareceu depois</strong><br>Não existia na Sprint 1 e entrou por nova evidência ou mudança de cenário.</div>
+ </section>
+
+ <section class="timeline">
+  <article class="sprint"><span class="tag">Sprint 1 · 20 min</span><h3>Conheça sua turma</h3><p>Analise os 30 estudantes e crie um backlog com no máximo <strong>5 ações</strong>.</p><p><strong>Pergunta:</strong> quais situações exigem atenção agora?</p></article>
+  <article class="sprint"><span class="tag">Sprint 2 · 20 min</span><h3>Novas informações</h3><p>Considere os documentos norteadores e 14 novas manifestações da turma.</p><p><strong>Pergunta:</strong> o que devemos manter, alterar, abandonar ou acrescentar?</p></article>
+  <article class="sprint"><span class="tag">Sprint 3 · 20 min</span><h3>O plano encontra a realidade</h3><p>Uma crise de convivência se intensifica e há novas saídas. A capacidade da equipe continua limitada.</p><p><strong>Pergunta:</strong> o que precisa mudar agora e o que vamos parar de fazer?</p></article>
+ </section>
+
+ <h2>Como acompanhar sem confundir</h2>
+ <div class="rules">
+   <ol>
+    <li>Na Sprint 1, criem de 3 a 5 itens. Não usem cores ainda; é a linha de base.</li>
+    <li>Na Sprint 2, revisem cada item existente. Marquem 🟢, 🟡 ou 🔴. Qualquer item realmente novo recebe 🔵.</li>
+    <li>Na Sprint 3, revisem novamente. Um item que nasceu como 🔵 na Sprint 2 pode agora ficar 🟢, 🟡 ou 🔴.</li>
+    <li>Nunca apaguem uma decisão abandonada. O abandono é evidência de aprendizagem, não erro.</li>
+    <li>Ao alterar algo, registrem em uma frase: <em>“Mudamos porque...”</em>.</li>
+   </ol>
+ </div>
+
+ <h2>Backlog vivo</h2>
+ <div class="toolbar">
+   <button class="primary" onclick="addRow()">+ Adicionar item</button>
+   <button class="secondary" onclick="exportJSON()">Exportar histórico</button>
+   <button class="secondary" onclick="window.print()">Imprimir / PDF</button>
+   <button class="danger" onclick="resetBoard()">Limpar quadro</button>
+ </div>
+ <div class="board-wrap">
+ <table id="board">
+  <thead><tr>
+   <th>ID</th><th>Estudante / situação</th><th>Evidência</th><th>Hipótese</th><th>Ação priorizada</th><th>Prioridade</th><th>Sprint</th><th>Status da revisão</th><th>Por que mudou?</th><th></th>
+  </tr></thead>
+  <tbody></tbody>
+ </table>
+ </div>
+
+ <h2>Sprint 2 · 14 novas manifestações</h2>
+ <div class="events" id="events"></div>
+
+ <h2>Sprint 3 · Incidente</h2>
+ <div class="crisis">
+  <strong>Cenário de crise</strong>
+  <p>Um conflito entre dois grupos de estudantes, inicialmente restrito às aulas, migra para mensagens fora do encontro. Há acusações sobre divisão de tarefas, comentários considerados desrespeitosos e estudantes tomando partido.</p>
+  <p><strong>Novas consequências:</strong> Wesley (A23) comunica que não pretende retornar; João Pedro (A10) formaliza sua saída; Paulo (A16) diz que só continua se puder mudar de grupo. Ao mesmo tempo, duas atividades coletivas precisam acontecer nos próximos encontros.</p>
+  <p><strong>Restrição:</strong> a equipe continua podendo sustentar apenas cinco frentes prioritárias. Não é permitido apenas “adicionar” ações. Para cada nova prioridade, algo pode precisar sair.</p>
+ </div>
+</main>
+<script>
+const updates = [["A08", "Henrique", "Diz que ainda não percebe como o conteúdo se conecta ao trabalho que realiza hoje."], ["A11", "Karen", "Relata que está cansada de organizar o grupo e que as tarefas não estão sendo divididas de forma justa."], ["A13", "Mariana", "Informa que talvez precise faltar em mais encontros nas próximas semanas."], ["A16", "Paulo", "Pede para trocar de grupo após um desentendimento que não havia sido comunicado antes."], ["A19", "Sofia", "Pergunta se existe possibilidade de migrar para outro curso que pareça mais próximo de suas expectativas."], ["A23", "Wesley", "Não comparece a mais um encontro e não responde ao primeiro contato feito pela equipe."], ["A05", "Eduarda", "Dois colegas dizem que evitam discordar dela porque as decisões acabam sendo centralizadas."], ["A10", "João Pedro", "Responde que está 'tentando organizar algumas coisas' e não sabe se conseguirá manter a frequência."], ["A17", "Queila", "Diz que está sobrecarregada por fazer tarefas que deveriam estar distribuídas entre colegas."], ["A20", "Thiago", "Pede ajuda para entender como quebrar uma entrega grande em etapas menores."], ["A22", "Vinícius", "Informa que continuará chegando atrasado em dois dias específicos por causa do deslocamento."], ["A25", "Arthur", "Relata novo bloqueio de acesso à plataforma usada no projeto."], ["A29", "Enzo", "Seu grupo afirma que ele inicia muitas frentes e deixa tarefas sem fechamento."], ["A30", "Fernanda", "Pergunta à equipe se concluir o curso ainda faz sentido para os objetivos profissionais que está reconsiderando."]];
+const STORAGE='coletivo_agil_backlog_v1';
+let rows = JSON.parse(localStorage.getItem(STORAGE)||'[]');
+let idCounter = Number(localStorage.getItem(STORAGE+'_counter')||1);
+
+function save(){localStorage.setItem(STORAGE,JSON.stringify(rows));localStorage.setItem(STORAGE+'_counter',idCounter)}
+function statusLabel(s){return {permaneceu:'🟢 permaneceu',alterado:'🟡 foi alterado',abandonado:'🔴 foi abandonado',apareceu:'🔵 apareceu depois','':''}[s]||''}
+function addRow(prefill={}){
+ rows.push({
+   id:'B'+String(idCounter++).padStart(2,'0'),
+   student:prefill.student||'', evidence:prefill.evidence||'', hypothesis:'', action:'',
+   priority:'Média', sprint:'Sprint 1', status:'', reason:''
+ });
+ save();renderBoard();
+}
+function removeRow(i){rows.splice(i,1);save();renderBoard()}
+function updateRow(i,key,val){rows[i][key]=val;save();renderBoard()}
+function renderBoard(){
+ const tb=document.querySelector('#board tbody');tb.innerHTML='';
+ rows.forEach((r,i)=>{
+  const tr=document.createElement('tr');
+  if(r.status) tr.className='status-'+r.status;
+  tr.innerHTML=`
+   <td><strong>${r.id}</strong><div class="audit">${statusLabel(r.status)}</div></td>
+   <td><input value="${esc(r.student)}" onchange="updateRow(${i},'student',this.value)"></td>
+   <td><textarea onchange="updateRow(${i},'evidence',this.value)">${esc(r.evidence)}</textarea></td>
+   <td><textarea onchange="updateRow(${i},'hypothesis',this.value)">${esc(r.hypothesis)}</textarea></td>
+   <td><textarea onchange="updateRow(${i},'action',this.value)">${esc(r.action)}</textarea></td>
+   <td><select onchange="updateRow(${i},'priority',this.value)">
+    ${['Alta','Média','Baixa'].map(v=>`<option ${r.priority===v?'selected':''}>${v}</option>`).join('')}
+   </select></td>
+   <td><select onchange="updateRow(${i},'sprint',this.value)">
+    ${['Sprint 1','Sprint 2','Sprint 3'].map(v=>`<option ${r.sprint===v?'selected':''}>${v}</option>`).join('')}
+   </select></td>
+   <td class="status-cell"><select onchange="updateRow(${i},'status',this.value)">
+     <option value="" ${!r.status?'selected':''}>Linha de base</option>
+     <option value="permaneceu" ${r.status==='permaneceu'?'selected':''}>🟢 permaneceu</option>
+     <option value="alterado" ${r.status==='alterado'?'selected':''}>🟡 foi alterado</option>
+     <option value="abandonado" ${r.status==='abandonado'?'selected':''}>🔴 foi abandonado</option>
+     <option value="apareceu" ${r.status==='apareceu'?'selected':''}>🔵 apareceu depois</option>
+   </select></td>
+   <td><textarea placeholder="Mudamos porque..." onchange="updateRow(${i},'reason',this.value)">${esc(r.reason)}</textarea></td>
+   <td><button class="danger" onclick="removeRow(${i})">×</button></td>`;
+  tb.appendChild(tr);
+ });
+}
+function esc(s){return String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')}
+function resetBoard(){if(confirm('Limpar todo o backlog e o histórico local?')){rows=[];idCounter=1;save();renderBoard();}}
+function exportJSON(){
+ const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),rows},null,2)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='backlog-coletivo-educacao.json';a.click();URL.revokeObjectURL(a.href);
+}
+document.getElementById('events').innerHTML=updates.map(u=>`<article class="event"><b>${u[0]} · ${u[1]}</b>${u[2]}</article>`).join('');
+const p=new URLSearchParams(location.search);
+if(p.get('student')&&p.get('evidence')){
+ const key=p.get('student');
+ if(!rows.some(r=>r.student===key)) addRow({student:key,evidence:p.get('evidence')});
+ history.replaceState(null,'','sprints.html');
+}
+renderBoard();
+</script>
+</body>
+</html>
