@@ -5,6 +5,8 @@ import { guidelines } from './data/guidelines'
 import { sprint2Events } from './data/sprint2Events'
 import { sprint3Events, sprint3Scenario } from './data/sprint3Events'
 import { students } from './data/students'
+import ClosingExperience from './ClosingExperience'
+import { EMPTY_CLOSING } from './closing'
 
 const STORAGE_KEY = 'coletivo-educacao-experience'
 const MAX_ACTIVE_BACKLOG = 5
@@ -15,6 +17,7 @@ const INITIAL_STATE = {
   backlog: [],
   sprintStartedAt: {},
   completedSprints: [],
+  closing: EMPTY_CLOSING,
 }
 
 const statusMeta = {
@@ -128,12 +131,13 @@ function App() {
           experience={experience}
           setNotice={setNotice}
           updateExperience={updateExperience}
-          onValidCode={() => transitionTo('FINISH')}
+          onValidCode={() => transitionTo('CLOSING')}
         />
       )}
-      {(experience.screen === 'FINISH' || experience.screen === 'FINISH_EARLY') && (
-        <Finish experience={experience} reduced={experience.screen === 'FINISH_EARLY'} />
+      {(experience.screen === 'CLOSING' || experience.screen === 'FINISH' || experience.screen === 'FINISH_EARLY') && (
+        <ClosingExperience experience={experience} updateExperience={updateExperience} onReview={() => updateExperience((current) => ({ screen: 'CLOSING', closing: { ...current.closing, currentStep: 0 } }))} onReset={resetExperience} />
       )}
+      {experience.screen === '__LEGACY_FINISH' && <Finish experience={experience} reduced={false} />}
       <button className="reset-button" type="button" onClick={resetExperience}>
         Reiniciar experiência
       </button>
@@ -641,7 +645,7 @@ function SprintAccess({ sprint, setNotice, onValidCode, updateExperience }) {
           </label>
           <label>Código de encerramento
             <input value={finishCode} onChange={(event) => setFinishCode(event.target.value)} />
-            <button type="button" onClick={() => validate(finishCode, ACCESS_CODES.sprint2ToFinish, 'FINISH_EARLY')}>Finalizar atividade</button>
+            <button type="button" onClick={() => validate(finishCode, ACCESS_CODES.sprint2ToFinish, 'CLOSING')}>Finalizar atividade</button>
           </label>
         </div>
       </section>
