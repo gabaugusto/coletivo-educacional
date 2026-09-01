@@ -186,7 +186,7 @@ Não apresentar os 30 estudantes ainda.
 
 Título:
 
-**Coletivo Educação**
+**Coletivo Educacional**
 
 Subtítulo:
 
@@ -324,7 +324,7 @@ Cada sprint deve conter:
 Exemplo:
 
 ```text
-COLETIVO EDUCAÇÃO
+COLETIVO EDUCACIONAL
 
 SPRINT 1 / 3
 
@@ -1836,3 +1836,15 @@ Ele deve sentir algo próximo de:
 > “E foi justamente esse processo de adaptação que revelou a Metodologia Ágil.”
 
 Mantenha essa ideia como critério principal para todas as decisões de UX e arquitetura.
+
+
+
+Dos procos o Cilênio evoca as almas,
+De ouro empunhado o caduceu que os olhos
+Mortais a gosto esperta e os adormece;
+Elas ao toque ciciando o seguem.
+5 Em divo antro profundo a revoarem,
+Guincham morcegos, se um dos cachos tomba
+Da rocha a que aderiram: tal se move
+Trás Mercúrio benóvolo, em murmúrios
+Pelo hediondo espaço, o tropel todo;

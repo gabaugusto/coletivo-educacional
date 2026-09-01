@@ -414,6 +414,14 @@ label {
 
 .access-panel {
   margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.access-panel button{
+  max-width: 20vw;
+  margin: 2vh auto;
+
 }
 
 .dual-access label {
@@ -473,6 +481,7 @@ blockquote {
 }
 
 @media (max-width: 1100px) {
+
   .sprint-header,
   .sprint-intro,
   .workbench {
@@ -513,4 +522,50 @@ blockquote {
   .backlog-title {
     display: grid;
   }
+}
+
+.closing { min-height: calc(100vh - 48px); max-width: 1120px; margin: 0 auto; padding-bottom: 4rem; }
+.closing-header { display: grid; grid-template-columns: auto minmax(180px, 420px); align-items: center; gap: 2rem; padding: 1rem 0 2.5rem; }
+.closing-header p { margin: 0; }
+.closing-progress { height: 4px; overflow: hidden; border-radius: 999px; background: var(--line); }
+.closing-progress span { display: block; height: 100%; background: var(--accent); transition: width 250ms ease; }
+.closing-content { display: grid; gap: 1.2rem; animation: closing-in 240ms ease-out; }
+.closing-content.narrow { max-width: 780px; margin: 0 auto; }
+.closing-content.spacious { max-width: 900px; margin: 5vh auto; gap: 2rem; }
+.closing-content h1 span { display: block; color: var(--accent-dark); margin-top: .25em; }
+.lead { max-width: 720px; font-size: 1.2rem; color: var(--muted); }
+.journey-block, .concept-block, .reality-call { margin-top: 1.5rem; }
+.closing .journey-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.retrospective-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.praxis-card { padding: 1rem; border: 1px solid var(--line); border-top: 5px solid currentColor; border-radius: 8px; background: var(--surface); color: var(--muted); }
+.praxis-card textarea { min-height: 145px; }
+.praxis-title { font-size: 1.1rem; color: var(--ink); }
+.experiment-options, .experiment-form { display: grid; gap: .9rem; }
+.experiment-options label { display: grid; grid-template-columns: auto 1fr; padding: 1rem; border: 2px solid var(--line); border-radius: 8px; background: var(--surface); cursor: pointer; }
+.experiment-options label.selected { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent); }
+.experiment-options input { width: auto; }
+.experiment-options span, .experiment-summary p { display: grid; gap: .35rem; }
+.experiment-summary, .contribution-card { padding: 1.25rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.experiment-summary b { text-transform: uppercase; color: var(--muted); font-size: .75rem; letter-spacing: .06em; }
+.form-error { padding: .75rem; border-left: 4px solid var(--red); background: #f9e8e5; color: var(--red); }
+.back-action { margin-top: 2rem; }
+.praxis-flow { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+.praxis-flow span { padding: .7rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-weight: 800; }
+.praxis-flow span:not(:last-child)::after { content: ' →'; margin-left: 1.2rem; color: var(--accent); }
+.activity-flow { padding-left: 1rem; border-left: 4px solid var(--accent); }
+.agile-sequence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; padding: 0; list-style: none; }
+.agile-sequence li { display: grid; gap: .5rem; padding: 1rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.agile-sequence strong { color: var(--accent-dark); font-size: 1.2rem; }
+.final-message { min-height: 75vh; align-content: center; max-width: 880px; margin: 0 auto; }
+.final-message article { margin: 1.5rem 0; padding-left: 1rem; border-left: 4px solid var(--blue); }
+.final-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; }
+.final-actions p { flex-basis: 100%; }
+
+@keyframes closing-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 680px) {
+  .closing-header, .retrospective-grid, .agile-sequence, .closing .journey-metrics { grid-template-columns: 1fr; }
+  .closing-header { gap: .75rem; }
+  .praxis-flow { display: grid; }
+  .praxis-flow span:not(:last-child)::after { content: ' ↓'; }
 }

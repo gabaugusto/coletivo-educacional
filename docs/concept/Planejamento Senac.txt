@@ -1,0 +1,28 @@
+Planejamento Senac
+
+Pensando em 90 pessoas
+
+15 grupos de 6 pessoas
+
+4 laboratórios
+
+cada laboratório terá 4 grupos e 1 com 3 grupos.
+
+15*4 = 60  minutos de apresentação
+
+Começar ás 14:15 com apresentação
+14:30 vai para o laboratório
+14:30 as 15:00 Primeira Sprint
+15:00 as 15:30 Segunda Sprint
+15:30 as 16:00 Terceira Sprint
+Apresentação as 16:10
+4 minutos * 15 grupos =  minutos
+
+Final 17:20
+Fechamento 5 minutos(5 minutos de gordura)
+
+A fazer:
+
+Criar 30 perfis de alunos com auto de gestão
+Dos 30,14 deu evasão.
+
