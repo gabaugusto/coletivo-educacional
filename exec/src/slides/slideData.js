@@ -1,6 +1,7 @@
 export const slides = [
   {
     id: "coletivo",
+    originalSlide: 1,
     type: "cover",
     eyebrow: "COLETIVO EDUCAÇÃO",
     title: "Metodologia Ágil na prática",
@@ -10,6 +11,7 @@ export const slides = [
   },
   {
     id: "regras",
+    originalSlide: 2,
     type: "statement",
     eyebrow: "ANTES DE COMEÇAR",
     title: "O tempo é curto. Isso faz parte da dinâmica.",
@@ -17,26 +19,27 @@ export const slides = [
       "As atividades são intencionalmente intensas. A proposta é tomar decisões com o que sabemos agora e revisar o caminho quando novas informações surgirem.",
     callout:
       "Durante todo o processo, uma pessoa da equipe registra fotos, anotações e evidências para compor o dossiê do grupo.",
+    durationSeconds: 30,
     accent: "neutral",
   },
   {
     id: "papeis",
+    originalSlide: 3,
     type: "list",
     eyebrow: "ORGANIZAÇÃO",
     title: "Distribuição dos papéis",
     items: [
-      "Navegador: acompanha as orientações e o tempo.",
-      "Cartógrafo: organiza visualmente mapas e decisões.",
-      "Guardião das evidências: pergunta “como sabemos disso?”.",
-      "Guardião da capacidade: ajuda o grupo a priorizar.",
-      "Porta-voz: conduz pitches e socializações.",
-      "Documentarista: registra fotos, anotações e evidências.",
+      "PO — mantém a squad focada no desafio e no valor da entrega.",
+      "SCRUM — organiza o ritmo do grupo, o tempo e a participação.",
+      "Documentarista — registra fotos, decisões, mudanças e evidências para o dossiê.",
     ],
-    footer: "Os papéis podem girar entre as sprints.",
+    footer: "Distribuam os três papéis antes de começar.",
+    durationSeconds: 60,
     accent: "neutral",
   },
   {
     id: "cenario",
+    originalSlide: 4,
     type: "scenario",
     eyebrow: "CENÁRIO INICIAL",
     title: "Um problema antes dos dados",
@@ -47,35 +50,31 @@ export const slides = [
     accent: "sprint1",
   },
   {
-    id: "sprint1",
-    type: "section",
-    eyebrow: "SPRINT 1",
-    title: "O problema antes dos dados",
-    subtitle:
-      "Construir um primeiro modelo do problema sem conhecer ainda os estudantes.",
-    accent: "sprint1",
-  },
-  {
     id: "s1-atividade1",
+    originalSlide: 6,
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 1",
     title: "Entender o cenário",
-    time: "10 min",
+    durationSeconds: 600,
     objective:
-      "Leiam o cenário, conversem e construam uma primeira interpretação do problema.",
+      "Leiam o cenário, conversem e construam uma primeira interpretação visual do problema.",
     deliverables: [
-      "Identificar os elementos centrais do cenário.",
-      "Discutir relações possíveis entre causas e efeitos.",
-      "Registrar percepções no mapa físico da equipe.",
+      "ENTREGA: um mapa físico do cenário construído pela squad.",
+      "Destacar os elementos que parecem influenciar permanência e engajamento.",
+      "Conectar possíveis relações entre causas, sinais e consequências.",
+      "Manter visível aquilo que ainda é dúvida ou hipótese.",
     ],
+    callout:
+      "Ao final dos 10 minutos, outra pessoa deve conseguir olhar para o mapa e compreender como a squad está enxergando o problema.",
     accent: "sprint1",
   },
   {
     id: "s1-atividade2",
+    originalSlide: 7,
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 2",
     title: "Desmontar o cenário",
-    time: "5 min",
+    durationSeconds: 300,
     objective:
       "Separar aquilo que é informação disponível daquilo que estamos apenas supondo.",
     deliverables: [
@@ -87,36 +86,41 @@ export const slides = [
   },
   {
     id: "s1-radar",
+    originalSlide: 8,
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 3",
-    title: "Radar de Investigação",
-    time: "5 min",
+    title: "Backlog de investigação",
+    durationSeconds: 300,
     objective:
-      "Transformar o mapa amplo em um foco de investigação.",
+      "Transformar o mapa amplo em um backlog inicial do que merece ser investigado primeiro.",
     deliverables: [
-      "3 riscos que investigaríamos.",
-      "3 perguntas que faríamos.",
-      "3 sinais que observaríamos.",
+      "3 riscos para colocar no backlog de investigação.",
+      "3 perguntas prioritárias que a squad faria.",
+      "3 sinais que a squad observaria.",
     ],
+    callout: "O backlog não é uma lista de soluções. É uma lista priorizada do que precisamos compreender.",
     accent: "sprint1",
   },
   {
     id: "s1-pitch",
+    originalSlide: 9,
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 4",
-    title: "Pitch cruzado",
-    time: "4 min",
+    title: "Pitch do backlog",
+    durationSeconds: 300,
     objective:
-      "Apresentem o Radar para outra squad e recebam uma provocação.",
+      "Apresentem o backlog de investigação para outra squad e recebam uma provocação.",
     callout:
-      "Pergunta de quem escuta: “O que vocês estão assumindo sem ainda possuir evidência?”",
+      "Pergunta de quem escuta: “O que vocês colocaram no backlog a partir de uma suposição, e não de uma evidência?”",
     accent: "sprint1",
   },
   {
     id: "revelacao",
+    originalSlide: 10,
     type: "reveal",
     eyebrow: "A REVELAÇÃO",
     title: "Vocês receberam quatro versões da realidade.",
+    durationSeconds: 120,
     items: [
       "A — Ausências e frequência",
       "B — Engajamento e vínculo",
@@ -129,41 +133,36 @@ export const slides = [
   },
   {
     id: "transicao2",
+    originalSlide: 11,
     type: "section",
     eyebrow: "NOVAS EVIDÊNCIAS",
     title: "Vocês criaram hipóteses sobre permanência.",
     subtitle: "Agora conhecerão as pessoas.",
-    accent: "sprint2",
-  },
-  {
-    id: "sprint2",
-    type: "section",
-    eyebrow: "SPRINT 2",
-    title: "A realidade ganha rosto",
-    subtitle:
-      "Confrontar hipóteses iniciais com os perfis e evidências de uma turma fictícia.",
+    durationSeconds: 120,
     accent: "sprint2",
   },
   {
     id: "alunos",
+    originalSlide: 13,
     type: "resource",
     eyebrow: "SPRINT 2 · RECURSO",
     title: "30 estudantes",
+    durationSeconds: 720,
     subtitle:
       "Acessem os perfis pelo QR Code ou pelo Teams. Nenhum estudante vem classificado como “em risco”.",
     callout:
-      "Procurem evidências. Evitem transformar interpretação em diagnóstico.",
+      "Durante este tempo, explorem a turma, comparem evidências e preparem a triagem da squad.",
     accent: "sprint2",
     placeholder: "QR CODE / LINK",
   },
   {
     id: "s2-triagem",
+    originalSlide: 14,
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 1",
     title: "Triagem da turma",
-    time: "12 min",
     objective:
-      "Analisem os estudantes e identifiquem situações que merecem atenção.",
+      "Organizem as situações que encontraram a partir das evidências disponíveis.",
     deliverables: [
       "Agir agora",
       "Entender melhor",
@@ -174,10 +173,11 @@ export const slides = [
   },
   {
     id: "s2-priorizar",
+    originalSlide: 15,
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 2",
     title: "Priorizar",
-    time: "5 min",
+    durationSeconds: 300,
     objective:
       "A equipe possui capacidade limitada. Escolham somente cinco frentes prioritárias.",
     callout:
@@ -186,10 +186,11 @@ export const slides = [
   },
   {
     id: "s2-priorizar2",
+    originalSlide: 16,
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 3",
     title: "Priorizar de novo",
-    time: "5 min",
+    durationSeconds: 600,
     objective:
       "Das cinco frentes escolhidas, apenas duas podem começar imediatamente.",
     deliverables: [
@@ -201,10 +202,11 @@ export const slides = [
   },
   {
     id: "s2-rodar",
+    originalSlide: 17,
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 4",
     title: "Rodar & Girar",
-    time: "8 min",
+    durationSeconds: 480,
     objective:
       "Visitem outra squad, conheçam uma decisão diferente e retornem para revisar o próprio raciocínio.",
     callout:
@@ -213,6 +215,7 @@ export const slides = [
   },
   {
     id: "sprint3",
+    originalSlide: 18,
     type: "section",
     eyebrow: "SPRINT 3",
     title: "A hora da ação",
@@ -222,10 +225,11 @@ export const slides = [
   },
   {
     id: "s3-solucao",
+    originalSlide: 19,
     type: "activity",
     eyebrow: "SPRINT 3 · ATIVIDADE",
     title: "Soluções",
-    time: "12 min",
+    durationSeconds: 1800,
     objective:
       "Reorganizem prioridades diante do novo cenário e materializem uma resposta possível.",
     deliverables: [
@@ -238,6 +242,7 @@ export const slides = [
   },
   {
     id: "sintese",
+    originalSlide: 20,
     type: "final",
     eyebrow: "A JORNADA",
     title: "Três perguntas, três ciclos",

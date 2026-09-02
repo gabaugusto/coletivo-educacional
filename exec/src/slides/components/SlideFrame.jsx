@@ -1,4 +1,5 @@
 import React from "react";
+import { SlideTimer } from "./SlideTimer";
 
 const accentMap = {
   neutral: "#111827",
@@ -10,6 +11,7 @@ const accentMap = {
 
 export function SlideFrame({ slide, index, total }) {
   const accent = accentMap[slide.accent] ?? accentMap.neutral;
+  const hasTimer = Number.isFinite(slide.durationSeconds) && slide.durationSeconds > 0;
 
   return (
     <section
@@ -24,9 +26,15 @@ export function SlideFrame({ slide, index, total }) {
         </span>
       </header>
 
-      <main className="slide__content">
-        {slide.time && <div className="slide__time">{slide.time}</div>}
+      {hasTimer && (
+        <SlideTimer
+          key={slide.id}
+          slideId={slide.id}
+          durationSeconds={slide.durationSeconds}
+        />
+      )}
 
+      <main className="slide__content">
         <h1>{slide.title}</h1>
 
         {slide.subtitle && <p className="slide__subtitle">{slide.subtitle}</p>}
