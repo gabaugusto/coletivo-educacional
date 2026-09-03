@@ -156,7 +156,7 @@ export const slides = [
     type: "resource",
     eyebrow: "SPRINT 2 · RECURSO",
     title: "30 estudantes",
-        image: "/qrcode.png",
+    image: "/qrcode.png",
     imageAlt: "QR Code para acessar os perfis dos estudantes",
     durationSeconds: 720,
     subtitle:
@@ -184,11 +184,30 @@ export const slides = [
     accent: "sprint2",
   },
   {
+    id: "s2-priorizar",
+    type: "resource",
+    eyebrow: "SPRINT 2 · Código",
+    title: "Práxis",
+    durationSeconds: 180,
+    subtitle:
+      "Digite o código \"PRÁXIS\" para atualizar a lista de estudantes com novos elementos.",
+    callout:
+      "Procurem evidências. Evitem transformar interpretação em diagnóstico. Analisem os estudantes e identifiquem situações que merecem atenção.",
+    accent: "sprint2",
+
+    deliverables: [
+      "Agir agora",
+      "Entender melhor",
+      "Acompanhar",
+      "Sem ação por enquanto",
+    ],
+  },
+  {
     id: "s2-priorizar2",
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 3",
     title: "Priorizar de novo",
-      
+
     objective:
       "Das cinco frentes escolhidas, apenas duas podem começar imediatamente.",
     deliverables: [
