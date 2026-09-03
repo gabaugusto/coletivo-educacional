@@ -1,4 +1,3 @@
-import React from "react";
 import { SlideTimer } from "./SlideTimer";
 
 const accentMap = {
@@ -72,8 +71,16 @@ export function SlideFrame({ slide, index, total }) {
         )}
 
         {slide.placeholder && (
-          <div className="slide__placeholder">
-            <span>{slide.placeholder}</span>
+          <div
+            className={`slide__placeholder${
+              slide.image ? " slide__placeholder--image" : ""
+            }`}
+          >
+            {slide.image ? (
+              <img src={slide.image} alt={slide.imageAlt ?? slide.placeholder} />
+            ) : (
+              <span>{slide.placeholder}</span>
+            )}
           </div>
         )}
 

@@ -734,7 +734,7 @@ Título:
 
 Texto:
 
-> Cada squad chegou até aqui por um caminho diferente.
+> Cada grupo chegou até aqui por um caminho diferente.
 >
 > Agora queremos registrar apenas uma contribuição para o grupo inteiro.
 
@@ -1465,7 +1465,7 @@ Nunca mostrar frases como:
 
 ou:
 
-“Sua squad foi altamente ágil.”
+“Sua grupo foi altamente ágil.”
 
 Não existe informação que permita isso.
 
