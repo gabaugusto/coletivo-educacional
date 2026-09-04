@@ -57,23 +57,23 @@ export const slides = [
     objective:
       "Leiam o cenário, conversem e construam uma primeira interpretação do problema.",
     deliverables: [
-      "ENTREGA: um mapa físico do cenário construído pela squad.",
+      "ENTREGA: um mapa físico do cenário construído pelo grupo.",
       "Destacar os elementos que parecem influenciar permanência e engajamento.",
       "Conectar possíveis relações entre causas, sinais e consequências.",
       "Manter visível aquilo que ainda é dúvida ou hipótese.",
     ],
     callout:
-      "Ao final do tempo, outra pessoa deve conseguir olhar para o mapa e compreender como a squad está enxergando o problema.",
+      "Ao final do tempo, outra pessoa deve conseguir olhar para o mapa e compreender como o grupo está enxergando o problema.",
     accent: "sprint1",
   },
   {
-    id: "s1-radar",
+    id: "s1-backlog",
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 3",
-    title: "Radar de Investigação",
+    title: "Backlog",
     durationSeconds: 300,
     objective:
-      "backlog inicial do que merece ser investigado primeiro.",
+      "Esse é o Backlog inicial do que merece ser investigado primeiro.",
     deliverables: [
       "3 riscos que investigaríamos.",
       "3 perguntas que faríamos.",
@@ -89,7 +89,7 @@ export const slides = [
     title: "Pitch cruzado",
     durationSeconds: 240,
     objective:
-      "Apresentem o Backlog para outra grupo e recebam uma provocação.",
+      "Apresentem o Backlog para outro grupo e recebam uma provocação.",
     callout:
       "Pergunta de quem escuta: “O que vocês estão assumindo sem ainda possuir evidência?”",
     accent: "sprint1",
@@ -168,13 +168,6 @@ export const slides = [
     callout:
       "Procurem evidências. Evitem transformar interpretação em diagnóstico. Analisem os estudantes e identifiquem situações que merecem atenção.",
     accent: "sprint2",
-
-    deliverables: [
-      "Agir agora",
-      "Entender melhor",
-      "Acompanhar",
-      "Sem ação por enquanto",
-    ],
   },
   {
     id: "s2-priorizar2",
@@ -189,6 +182,7 @@ export const slides = [
       "Explicar por que as outras 3 podem esperar.",
       "Registrar o que faria a equipe mudar essa ordem.",
     ],
+    durationSeconds: 300,
     accent: "sprint2",
   },
   {
@@ -198,7 +192,7 @@ export const slides = [
     title: "Rodar & Girar",
     durationSeconds: 480,
     objective:
-      "Visitem outra squad, conheçam uma decisão diferente e retornem para revisar o próprio raciocínio.",
+      "Visitem outro grupo, conheçam uma decisão diferente e retornem para revisar o próprio raciocínio.",
     callout:
       "Busquem uma decisão que faria sua equipe repensar uma prioridade.",
     accent: "sprint2",
