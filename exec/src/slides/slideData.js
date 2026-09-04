@@ -189,7 +189,7 @@ export const slides = [
     id: "s2-rodar",
     type: "activity",
     eyebrow: "SPRINT 2 · ATIVIDADE 4",
-    title: "Rodar & Girar",
+    title: "World Café",
     durationSeconds: 480,
     objective:
       "Visitem outro grupo, conheçam uma decisão diferente e retornem para revisar o próprio raciocínio.",
