@@ -11,6 +11,7 @@ const accentMap = {
 export function SlideFrame({ slide, index, total }) {
   const accent = accentMap[slide.accent] ?? accentMap.neutral;
   const hasTimer = Number.isFinite(slide.durationSeconds) && slide.durationSeconds > 0;
+  const hasPlaceholder = Boolean(slide.placeholder || slide.image);
 
   return (
     <section
@@ -70,14 +71,14 @@ export function SlideFrame({ slide, index, total }) {
           </div>
         )}
 
-        {slide.placeholder && (
+        {hasPlaceholder && (
           <div
             className={`slide__placeholder${
               slide.image ? " slide__placeholder--image" : ""
             }`}
           >
             {slide.image ? (
-              <img src={slide.image} alt={slide.imageAlt ?? slide.placeholder} />
+              <img src={slide.image} alt={slide.imageAlt ?? slide.placeholder ?? ""} />
             ) : (
               <span>{slide.placeholder}</span>
             )}

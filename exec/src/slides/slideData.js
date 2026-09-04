@@ -48,21 +48,12 @@ export const slides = [
     accent: "sprint1",
   },
   {
-    id: "sprint1",
-    type: "section",
-    eyebrow: "SPRINT 1",
-    title: "O problema antes dos dados",
-    subtitle:
-      "Construir um primeiro modelo do problema sem conhecer ainda os estudantes.",
-    accent: "sprint1",
-  },
-  {
     id: "s1-atividade1",
     type: "activity",
     eyebrow: "SPRINT 1 · ATIVIDADE 1",
     title: "Entender o cenário",
     time: "10 min",
-    durationSeconds: 600,
+    durationSeconds: 820,
     objective:
       "Leiam o cenário, conversem e construam uma primeira interpretação do problema.",
     deliverables: [
@@ -72,23 +63,7 @@ export const slides = [
       "Manter visível aquilo que ainda é dúvida ou hipótese.",
     ],
     callout:
-      "Ao final dos 10 minutos, outra pessoa deve conseguir olhar para o mapa e compreender como a squad está enxergando o problema.",
-    accent: "sprint1",
-  },
-  {
-    id: "s1-atividade2",
-    type: "activity",
-    eyebrow: "SPRINT 1 · ATIVIDADE 2",
-    title: "Desmontar o cenário",
-    time: "5 min",
-    durationSeconds: 300,
-    objective:
-      "Separar aquilo que é informação disponível daquilo que estamos apenas supondo.",
-    deliverables: [
-      "SABEMOS: evidências presentes no cenário.",
-      "ACREDITAMOS: interpretações e hipóteses do grupo.",
-      "FARÍAMOS: ações que tomaríamos.",
-    ],
+      "Ao final do tempo, outra pessoa deve conseguir olhar para o mapa e compreender como a squad está enxergando o problema.",
     accent: "sprint1",
   },
   {
@@ -123,12 +98,11 @@ export const slides = [
     id: "revelacao",
     type: "reveal",
     eyebrow: "A REVELAÇÃO",
-    title: "Vocês receberam quatro versões da realidade.",
+    title: "Vocês receberam versões da realidade.",
     items: [
       "A — Ausências e frequência",
       "B — Engajamento e vínculo",
       "C — Expectativas e sentido",
-      "D — Relações e experiência coletiva",
     ],
     callout:
       "Nenhuma equipe recebeu uma informação falsa. Mas nenhuma equipe recebeu o quadro inteiro.",
@@ -188,7 +162,7 @@ export const slides = [
     type: "resource",
     eyebrow: "SPRINT 2 · Código",
     title: "Práxis",
-    durationSeconds: 180,
+    durationSeconds: 60,
     subtitle:
       "Digite o código \"PRÁXIS\" para atualizar a lista de estudantes com novos elementos.",
     callout:
