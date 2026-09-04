@@ -134,7 +134,7 @@ export const slides = [
     imageAlt: "QR Code para acessar os perfis dos estudantes",
     durationSeconds: 720,
     subtitle:
-      "Acessem os perfis pelo QR Code ou pelo Teams.",
+      "Acessem os perfis pelo QR Code ou pelo endereço https://shorturl.at/GO3Pr",
     callout:
       "Procurem evidências. Evitem transformar interpretação em diagnóstico. Analisem os estudantes e identifiquem situações que merecem atenção.",
     accent: "sprint2",
